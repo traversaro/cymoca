@@ -92,7 +92,7 @@ int main(int argc, const char *argv[]) {
     // compile
     path model_path(vm["model"].as<string>());
     assert(exists(model_path));
-    ifstream fileStream(model_path.string());
+    std::ifstream fileStream(model_path.string());
     cymoca::Compiler c(fileStream);
 
     //cout << bar << "\nLexer\n" << bar << endl;
